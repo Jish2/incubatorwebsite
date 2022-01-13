@@ -4,6 +4,10 @@
 	font-family: Poppins;
 }
 
+body {
+	background-color: black;
+}
+
 :root {
 	--main-color: #2ea8ff;
 	--background-color: #cecece;
@@ -153,8 +157,8 @@
 	background-size: cover;
 }
 
-.navbar.sticky {
-	background: rgb(255, 255, 255, 0.8);
+nav.navbar.sticky {
+	background: rgba(255, 255, 255, 0.2);
 }
 
 .title {
@@ -235,4 +239,63 @@
 .button2:hover:before {
 	transform: skewX(-45deg) translateX(13.5em);
 	transition: all 0.5s ease-in-out;
+}
+
+footer {
+	display: block;
+	overflow: auto;
+
+	width: 100vw;
+	height: 50px;
+
+	background-image: linear-gradient(0deg, rgba(78, 78, 78, 0.5), transparent);
+}
+
+.socials {
+	float: right;
+}
+
+.socials ul {
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+
+	position: relative;
+	margin: 10px 30px;
+}
+
+.socials ul li {
+	margin: 0 5px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.icon {
+	padding: 5px;
+	border: white solid 1px;
+	border-radius: 100%;
+	color: white;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.icon:hover {
+	border-color: var(--main-color);
+	background-color: var(--main-color);
+	color: black;
+}
+
+.leftFooter {
+	float: left;
+	width: auto;
+	margin: auto;
+	padding-left: 10px;
+}
+
+.leftFooter p {
+	margin: 0;
+	line-height: 50px;
+
+	width: fit-content;
+	color: white;
 }
