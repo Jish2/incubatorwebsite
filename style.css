@@ -164,13 +164,11 @@ nav.navbar.sticky {
 	margin-left: 15vw;
 	margin-right: 15vw;
 
-	position: sticky;
-
 	color: #fff;
 	font-weight: normal;
-
 	text-align: center;
-	transform: translateY(35vh);
+
+	/* transform: translateY(30vh); */
 }
 
 @keyframes sheen {
@@ -183,15 +181,8 @@ nav.navbar.sticky {
 }
 
 .newbutton {
-	position: sticky;
-	transform: translateY(38vh);
-
-	width: 100vw;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+	margin: 0;
+	width: 100%;
 	text-transform: uppercase;
 }
 
@@ -292,4 +283,18 @@ footer {
 
 	width: fit-content;
 	color: white;
+}
+
+.title-container {
+	width: auto;
+	height: auto;
+
+	margin: 0;
+	transform: translateY(-50%);
+	top: 45%;
+	position: absolute;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
