@@ -21,7 +21,7 @@
 			<ul class="navbar-elements">
 				<li class="navbar-hover-link"><a href="#top">Home</a></li>
 				<li class="navbar-hover-link"><a href="#info">Info</a></li>
-				<li class="navbar-hover-link"><a href="#product">Shop</a></li>
+				<li class="navbar-hover-link"><a href="#shop">Shop</a></li>
 				<li class="navbar-hover-link"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -47,13 +47,10 @@
 					>
 				</div>
 			</div>
-			<div class="title-container">
-				<!-- <h1 class="title">No matter the condition or time, your car will be clean</h1> -->
-			</div>
 		</section>
 
 		<div id="info" class="info">
-			<div style="width: vw; height: 5vh"></div>
+			<div style="width: vw; height: 12vh"></div>
 			<h1>Our team</h1>
 			<p>
 				We formed our company in early September and began researching potential
@@ -78,7 +75,33 @@
 			</p>
 		</div>
 
-		<div style="width: vw; height: 0vh"></div>
+		<div style="width: vw; height: 5vh"></div>
+
+		<div id="shop">
+			<div style="width: vw; height: 12vh"></div>
+			<div class="title">3D Prototype</div>
+
+			<div class="model-three">
+				<model-viewer
+					bounds="tight"
+					src="BoomBox.glb"
+					ar
+					ar-modes="webxr scene-viewer quick-look"
+					camera-controls
+					environment-image="neutral"
+					poster="img/poster.webp"
+					shadow-intensity="1"
+				>
+					<div class="progress-bar hide" slot="progress-bar">
+						<div class="update-bar"></div>
+					</div>
+					<button slot="ar-button" id="ar-button">View in your space</button>
+					<div id="ar-prompt">
+						<img src="img/ar_hand_prompt.png" />
+					</div>
+				</model-viewer>
+			</div>
+		</div>
 
 		<div id="contact" class="contact-container">
 			<div style="width: vw; height: 12vh"></div>
@@ -176,6 +199,10 @@
 		<script
 			nomodule
 			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script
+			type="module"
+			src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
 		></script>
 	</body>
 </html>
