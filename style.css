@@ -3,6 +3,7 @@
 
 html {
 	scroll-behavior: smooth;
+	zoom: 90%;
 }
 
 body {
@@ -603,8 +604,8 @@ footer {
 }
 
 model-viewer {
-	width: 70vw;
-	height: 40vh;
+	width: 50vw;
+	height: 50vh;
 	border: 5px solid rgba(255, 255, 255, 0.446);
 	border-radius: 1rem;
 }
