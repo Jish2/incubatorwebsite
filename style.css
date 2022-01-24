@@ -205,7 +205,7 @@ nav.navbar.sticky {
 	}
 }
 
-.newbutton {
+.newButton {
 	position: relative;
 
 	margin: 2vh 0;
@@ -264,10 +264,10 @@ nav.navbar.sticky {
 
 footer {
 	display: block;
-	overflow: auto;
+	overflow: show;
 
 	width: 100vw;
-	height: 50px;
+	height: auto;
 
 	background-image: linear-gradient(0deg, rgba(78, 78, 78, 0.75), transparent);
 }
@@ -288,8 +288,7 @@ footer {
 
 .socials ul li {
 	margin: 0 5px;
-	height: 30px;
-	line-height: 30px;
+	line-height: 3vmax;
 }
 
 .icon {
@@ -299,6 +298,9 @@ footer {
 	color: white;
 	text-align: center;
 	transition: 0.5s;
+
+	height: 3vmax;
+	width: 3vmax;
 }
 
 .icon:hover {
@@ -314,12 +316,13 @@ footer {
 	padding-left: 10px;
 	color: rgb(198, 198, 198);
 	font-weight: 100;
+	font-size: 2vmax;
 }
 
 .leftFooter p {
 	margin: 0;
 	line-height: 20px;
-	font-size: 25px;
+	font-size: 3vmax;
 	margin: 2px;
 	width: fit-content;
 	color: white;
@@ -337,20 +340,21 @@ footer {
 
 .email {
 	color: rgb(167, 167, 167);
-	font-size: 15px;
+	font-size: 2vmax;
+
 	text-decoration: underline;
 	margin: 0;
 	line-height: 15px;
 	width: fit-content;
 }
 
-#mc_embed_signup {
-	/* width: 100vw; */
-	/* margin: 0 10vw; */
-	/* display: flex;
+/* #mc_embed_signup {
+	width: 100vw;
+	margin: 0 10vw;
+	display: flex;
 	justify-content: center;
-	align-items: center;*/
-}
+	align-items: center;
+} */
 
 #mce-EMAIL {
 	width: 70vw;
@@ -393,10 +397,10 @@ footer {
 	padding: 0 10px;
 }
 
-#mc-embedded-subscribe-form {
-	/* margin: 0; */
-	/* padding: 0; */
-}
+/* #mc-embedded-subscribe-form {
+	margin: 0;
+	padding: 0;
+} */
 
 .info {
 	margin: 10vw;
@@ -406,7 +410,7 @@ footer {
 	margin: 3vh 0 0 0;
 	font-size: max(3.5vw, 3.5vh);
 	color: white;
-	font-weight: 100;
+	font-weight: 200;
 }
 
 .info p {
@@ -444,6 +448,9 @@ footer {
 }
 
 .container1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .validate {
@@ -453,16 +460,12 @@ footer {
 }
 
 .contact-container {
-	margin: 10vw;
+	margin: 8vw;
 }
 
-.people ul {
-	list-style: none;
-}
-
-.people ul li img {
-	width: min(10vw, 10vh);
-	height: min(10vw, 10vh);
+.people img {
+	width: 9vmax;
+	height: 9vmax;
 
 	border-radius: 100%;
 	border: 3px solid white;
@@ -471,9 +474,130 @@ footer {
 
 .people {
 	display: grid;
+	grid-row-gap: 1vh;
+	grid-template-columns: calc(9vmax + 6px) auto calc(9vmax + 6px) auto;
+	grid-template-rows: 20% 30% 20% 30%;
 }
 
-.people ul li p {
+.people p {
 	text-transform: uppercase;
 	color: white;
+	font-weight: 100;
+	font-size: 3vmax;
+	margin: 0;
+	padding-left: 2vmax;
+}
+
+.people a {
+	color: #a7a7a7;
+	font-weight: 200;
+	font-size: 2vmax;
+
+	padding-left: 2vmax;
+	padding-top: 1vh;
+}
+
+.people .noah1 {
+	grid-column: 1/2;
+	grid-row: 1 / span 2;
+}
+.people .noah2 {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+.people .noah3 {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+.people .gavin1 {
+	grid-column: 3/4;
+	grid-row: 1 / span 2;
+}
+.people .gavin2 {
+	grid-column: 4/5;
+	grid-row: 1/2;
+}
+.people .gavin3 {
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+.people .josh1 {
+	grid-column: 1/2;
+	grid-row: 3 / span 2;
+}
+.people .josh2 {
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
+.people .josh3 {
+	grid-column: 2/3;
+	grid-row: 4/5;
+}
+.people .ali1 {
+	grid-column: 3/4;
+	grid-row: 3 / span 2;
+}
+.people .ali2 {
+	grid-column: 4/5;
+	grid-row: 3/4;
+}
+.people .ali3 {
+	grid-column: 4/5;
+	grid-row: 4/5;
+}
+
+@media only screen and (max-width: 700px) {
+	.people {
+		grid-template-columns: calc(9vmax + 6px) auto;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.people .noah1 {
+		grid-column: 1/2;
+		grid-row: 1 / span 2;
+	}
+	.people .noah2 {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+	.people .noah3 {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+	.people .gavin1 {
+		grid-column: 1/2;
+		grid-row: 3 / span 2;
+	}
+	.people .gavin2 {
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
+	.people .gavin3 {
+		grid-column: 2/3;
+		grid-row: 4/5;
+	}
+	.people .josh1 {
+		grid-column: 1/2;
+		grid-row: 5 / span 2;
+	}
+	.people .josh2 {
+		grid-column: 2/3;
+		grid-row: 5/6;
+	}
+	.people .josh3 {
+		grid-column: 2/3;
+		grid-row: 6/7;
+	}
+	.people .ali1 {
+		grid-column: 1/2;
+		grid-row: 7 / span 2;
+	}
+	.people .ali2 {
+		grid-column: 2/3;
+		grid-row: 7;
+	}
+	.people .ali3 {
+		grid-column: 2/3;
+		grid-row: 8;
+	}
 }
