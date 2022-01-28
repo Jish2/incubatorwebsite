@@ -628,3 +628,8 @@ model-viewer {
 	justify-content: center;
 	align-items: center;
 }
+
+.prototype-img {
+	width: 60vw;
+	height: auto;
+}
