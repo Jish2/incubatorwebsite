@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
 
 html {
+	zoom: 100%;
 	scroll-behavior: smooth;
 }
 
