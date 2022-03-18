@@ -634,3 +634,50 @@ model-viewer {
 	width: 40vw;
 	height: auto;
 }
+
+.shop-container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.left-shop {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3vmax;
+}
+
+.right-shop {
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	margin: 3vmax;
+}
+
+.shop-container h1 {
+	/* margin: 3vh 0 0 0; */
+	font-size: max(3.5vw, 3.5vh);
+	color: white;
+	font-weight: 200;
+}
+
+.shop-container p {
+	/* margin: 0; */
+	font-size: max(2.5vw, 3.5vh);
+	color: rgb(179, 179, 179);
+	font-weight: 100;
+}
+
+.shop-btn {
+	width: 15vw;
+}
+
+.prod-img {
+	/* transform: scale(2); */
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+}
